@@ -51,6 +51,7 @@ require('lazy').setup({
       vim.cmd.colorscheme "catppuccin"
     end
   },
+  { "rose-pine/neovim", name = "rose-pine"},
   {
     'nvim-lualine/lualine.nvim',
     -- See `:help lualine.txt`
