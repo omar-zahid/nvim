@@ -16,8 +16,15 @@ require('lazy').setup({
   'tpope/vim-rhubarb',
   'tpope/vim-sleuth',
   'nvim-treesitter/nvim-treesitter-context',
-  'theprimeagen/harpoon',
   'mbbill/undotree',
+  "nvim-lua/plenary.nvim",
+  {
+    'ThePrimeagen/harpoon',
+    branch = 'harpoon2',
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    }
+  },
   {
     'neovim/nvim-lspconfig',
     dependencies = {
@@ -91,4 +98,7 @@ require('lazy').setup({
     event = "InsertEnter",
     opts = {} 
   },
+  {
+
+  }
 },{})
