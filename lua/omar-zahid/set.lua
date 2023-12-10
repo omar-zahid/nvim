@@ -28,16 +28,16 @@ vim.opt.updatetime = 50
 
 -- vim.opt.colorcolumn = "80"
 
-vim.opt.clipboard = 'unnamedplus'
+vim.opt.clipboard = "unnamedplus"
 
 --WSL Fix
-if vim.fn.has('wsl') == 1 then
-  vim.api.nvim_create_autocmd('TextYankPost', {
-    group = vim.api.nvim_create_augroup('Yank', { clear = true }),
-    callback = function()
-      vim.fn.system('clip.exe', vim.fn.getreg('"'))
-    end,
-  })
+if vim.fn.has("wsl") == 1 then
+	vim.api.nvim_create_autocmd("TextYankPost", {
+		group = vim.api.nvim_create_augroup("Yank", { clear = true }),
+		callback = function()
+			vim.fn.system("clip.exe", vim.fn.getreg('"'))
+		end,
+	})
 end
 
 -- Case insensitive searching UNLESS /C or capital in search
@@ -45,13 +45,13 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 --
 -- Set completeopt to have a better completion experience
-vim.opt.completeopt = 'menuone,noselect'
+vim.opt.completeopt = "menuone,noselect"
 
-local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
-vim.api.nvim_create_autocmd('TextYankPost', {
-  callback = function()
-    vim.highlight.on_yank()
-  end,
-  group = highlight_group,
-  pattern = '*',
+local highlight_group = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
+vim.api.nvim_create_autocmd("TextYankPost", {
+	callback = function()
+		vim.highlight.on_yank()
+	end,
+	group = highlight_group,
+	pattern = "*",
 })
