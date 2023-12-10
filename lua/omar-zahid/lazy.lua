@@ -19,6 +19,10 @@ require('lazy').setup({
   'mbbill/undotree',
   "nvim-lua/plenary.nvim",
   {
+    'stevearc/conform.nvim',
+    opts = {},
+  },
+  {
     'ThePrimeagen/harpoon',
     branch = 'harpoon2',
     dependencies = {
