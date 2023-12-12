@@ -12,6 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+	"github/copilot.vim",
 	"tpope/vim-fugitive",
 	"tpope/vim-rhubarb",
 	"tpope/vim-sleuth",

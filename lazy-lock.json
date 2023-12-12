@@ -5,6 +5,7 @@
   "cmp-nvim-lsp": { "branch": "main", "commit": "44b16d11215dce86f253ce0c30949813c0a90765" },
   "cmp_luasnip": { "branch": "master", "commit": "05a9ab28b53f71d1aece421ef32fee2cb857a843" },
   "conform.nvim": { "branch": "master", "commit": "8df1bed7b8de9cf40476996fb5ab73ed667aed35" },
+  "copilot.vim": { "branch": "release", "commit": "2c31989063b145830d5f0bea8ab529d2aef2427b" },
   "fidget.nvim": { "branch": "main", "commit": "b26cdb2b8ea2bf06d27f1bb254e8f027e259f74f" },
   "gitsigns.nvim": { "branch": "main", "commit": "87640f5a877b18bdd49884dbcac220fed924b867" },
   "harpoon": { "branch": "harpoon2", "commit": "70703d6ce1da56a07c50ad2dadc894410b9ebe34" },
