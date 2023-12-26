@@ -67,6 +67,10 @@ require("lazy").setup({
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",
+		priority = 1000,
+		config = function()
+			vim.cmd.colorscheme("catppuccin")
+		end,
 	},
 	{
 		"projekt0n/github-nvim-theme",
@@ -79,7 +83,7 @@ require("lazy").setup({
 		opts = {
 			options = {
 				icons_enabled = false,
-				-- theme = "catppucin",
+				theme = "catppuccin",
 				component_separators = "|",
 				section_separators = "",
 			},
