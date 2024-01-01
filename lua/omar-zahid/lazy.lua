@@ -66,6 +66,7 @@ require("lazy").setup({
 	},
 	{
 		"catppuccin/nvim",
+		lazy = false,
 		name = "catppuccin",
 		priority = 1000,
 		config = function()
@@ -73,17 +74,11 @@ require("lazy").setup({
 		end,
 	},
 	{
-		"projekt0n/github-nvim-theme",
-		name = "github-theme",
-	},
-	{ "rose-pine/neovim", name = "rose-pine" },
-	{
 		"nvim-lualine/lualine.nvim",
 		-- See `:help lualine.txt`
 		opts = {
 			options = {
 				icons_enabled = false,
-				theme = "catppuccin",
 				component_separators = "|",
 				section_separators = "",
 			},
