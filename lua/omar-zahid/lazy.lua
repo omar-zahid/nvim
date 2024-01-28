@@ -69,18 +69,19 @@ require("lazy").setup({
 		lazy = false,
 		name = "catppuccin",
 		priority = 1000,
-		config = function()
-			vim.cmd.colorscheme("catppuccin")
-		end,
+		opts = {
+			flavour = "mocha",
+		},
 	},
 	{
 		"nvim-lualine/lualine.nvim",
 		-- See `:help lualine.txt`
 		opts = {
 			options = {
-				icons_enabled = false,
+				icons_enabled = true,
 				component_separators = "|",
 				section_separators = "",
+				theme = "catppuccin",
 			},
 		},
 	},
@@ -110,6 +111,15 @@ require("lazy").setup({
 		"windwp/nvim-autopairs",
 		event = "InsertEnter",
 		opts = {},
+	},
+	{
+		"rest-nvim/rest.nvim",
+		dependencies = { { "nvim-lua/plenary.nvim" } },
+		config = function()
+			require("rest-nvim").setup({
+				--- Get the same options from Packer setup
+			})
+		end,
 	},
 	{},
 }, {})
