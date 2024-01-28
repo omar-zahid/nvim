@@ -71,6 +71,9 @@ require("lazy").setup({
 		priority = 1000,
 		opts = {
 			flavour = "mocha",
+			integrations = {
+				ts_rainbow2 = true,
+			},
 		},
 	},
 	{
@@ -101,6 +104,7 @@ require("lazy").setup({
 		"nvim-treesitter/nvim-treesitter",
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter-textobjects",
+			"HiPhish/nvim-ts-rainbow2",
 		},
 		config = function()
 			pcall(require("nvim-treesitter.install").update({ with_sync = true }))
