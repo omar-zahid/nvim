@@ -1,3 +1,4 @@
+---@diagnostic disable: missing-fields
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
 require("nvim-treesitter.configs").setup({
@@ -61,13 +62,5 @@ require("nvim-treesitter.configs").setup({
 				["<leader>k"] = "@parameter.inner",
 			},
 		},
-	},
-	rainbow = {
-		enable = true,
-		disable = {},
-		-- Which query to use for finding delimiters
-		query = "rainbow-parens",
-		-- Highlight the entire buffer all at once
-		strategy = require("ts-rainbow").strategy.global,
 	},
 })
