@@ -53,8 +53,10 @@ local servers = {
 	docker_compose_language_service = {},
 	rust_analyzer = {},
 	tsserver = {},
+	eslint_d = {},
 	eslint = {},
-
+	bashls = {},
+	prettierd = {},
 	lua_ls = {
 		Lua = {
 			workspace = { checkThirdParty = false },
