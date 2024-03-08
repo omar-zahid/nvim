@@ -76,6 +76,9 @@ require("lazy").setup({
 				rainbow_delimiters = true,
 			},
 		},
+		config = function()
+			vim.cmd.colorscheme("catppuccin")
+		end,
 	},
 	{
 		"nvim-lualine/lualine.nvim",
