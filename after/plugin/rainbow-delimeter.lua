@@ -11,5 +11,6 @@ vim.g.rainbow_delimiters = {
 		[""] = "rainbow-delimiters",
 		lua = "rainbow-blocks",
 		["tsx"] = "rainbow-parens",
+		["html"] = "rainbow-parens",
 	},
 }
