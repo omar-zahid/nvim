@@ -65,6 +65,13 @@ require("lazy").setup({
 			},
 		},
 	},
+	-- {
+	-- 	"rosepine/neovim",
+	-- 	name = "rose-pine",
+	-- 	config = function()
+	-- 		vim.cmd.colorscheme("rose-pine")
+	-- 	end,
+	-- },
 	{
 		"catppuccin/nvim",
 		lazy = false,
