@@ -70,13 +70,13 @@ require("lazy").setup({
 		lazy = false,
 		name = "catppuccin",
 		priority = 1000,
-		opts = {
-			flavour = "mocha",
-			integrations = {
-				rainbow_delimiters = true,
-			},
-		},
 		config = function()
+			require("catppuccin").setup({
+				flavour = "mocha",
+				integrations = {
+					rainbow_delimiters = true,
+				},
+			})
 			vim.cmd.colorscheme("catppuccin")
 		end,
 	},
