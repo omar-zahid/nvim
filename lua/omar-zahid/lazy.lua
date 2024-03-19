@@ -99,11 +99,11 @@ require("lazy").setup({
 			},
 		},
 	},
-	{ "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
+	{ "lukas-reineke/indent-blankline.nvim", main = "ibl",  opts = {} },
 	-- "gc" to comment visual regions/lines
-	{ "numToStr/Comment.nvim", opts = {} },
+	{ "numToStr/Comment.nvim",               opts = {} },
 	-- Fuzzy Finder (files, lsp, etc)
-	{ "nvim-telescope/telescope.nvim", version = "*", dependencies = { "nvim-lua/plenary.nvim" } },
+	{ "nvim-telescope/telescope.nvim",       version = "*", dependencies = { "nvim-lua/plenary.nvim" } },
 	{
 		"nvim-telescope/telescope-fzf-native.nvim",
 		build = "make",
@@ -127,12 +127,17 @@ require("lazy").setup({
 		opts = {},
 	},
 	{
-		"rest-nvim/rest.nvim",
-		dependencies = { { "nvim-lua/plenary.nvim" } },
+		"vhyrro/luarocks.nvim",
 		config = function()
-			require("rest-nvim").setup({
-				--- Get the same options from Packer setup
-			})
+			require("luarocks").setup({})
+		end,
+	},
+	{
+		"rest-nvim/rest.nvim",
+		ft = "http",
+		dependencies = { "luarocks.nvim" },
+		config = function()
+			require("rest-nvim").setup()
 		end,
 	},
 	{},
