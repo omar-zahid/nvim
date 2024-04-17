@@ -89,15 +89,6 @@ require("lazy").setup({
 	},
 	{
 		"nvim-lualine/lualine.nvim",
-		-- See `:help lualine.txt`
-		opts = {
-			options = {
-				icons_enabled = true,
-				component_separators = "|",
-				section_separators = "",
-				theme = "catppuccin",
-			},
-		},
 	},
 	{ "lukas-reineke/indent-blankline.nvim", main = "ibl",  opts = {} },
 	-- "gc" to comment visual regions/lines
