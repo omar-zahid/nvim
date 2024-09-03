@@ -3,8 +3,10 @@ require("conform").setup({
 		lua = { "stylua" },
 		-- Use a sub-list to run only the first available formatter
 		javascript = { { "prettierd", "prettier" } },
+		html = { { "prettierd", "prettier" } },
 		typescript = { { "prettierd", "prettier" } },
 		typescriptreact = { { "prettierd", "prettier" } },
+		astro = { { "prettierd", "prettier" } },
 	},
 	format_on_save = {
 		-- These options will be passed to conform.format()
