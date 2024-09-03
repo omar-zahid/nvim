@@ -2,11 +2,11 @@ require("conform").setup({
 	formatters_by_ft = {
 		lua = { "stylua" },
 		-- Use a sub-list to run only the first available formatter
-		javascript = { { "prettierd", "prettier" } },
-		html = { { "prettierd", "prettier" } },
-		typescript = { { "prettierd", "prettier" } },
-		typescriptreact = { { "prettierd", "prettier" } },
-		astro = { { "prettierd", "prettier" } },
+		javascript = { "prettierd", "prettier", stop_after_first = true },
+		html = { "prettierd", "prettier", stop_after_first = true },
+		typescript = { "prettierd", "prettier", stop_after_first = true },
+		typescriptreact = { "prettierd", "prettier", stop_after_first = true },
+		astro = { "prettierd", "prettier", stop_after_first = true },
 	},
 	format_on_save = {
 		-- These options will be passed to conform.format()
