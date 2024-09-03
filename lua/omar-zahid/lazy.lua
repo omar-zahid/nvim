@@ -65,13 +65,6 @@ require("lazy").setup({
 			},
 		},
 	},
-	-- {
-	-- 	"rosepine/neovim",
-	-- 	name = "rose-pine",
-	-- 	config = function()
-	-- 		vim.cmd.colorscheme("rose-pine")
-	-- 	end,
-	-- },
 	{
 		"catppuccin/nvim",
 		lazy = false,
@@ -90,11 +83,17 @@ require("lazy").setup({
 	{
 		"nvim-lualine/lualine.nvim",
 	},
-	{ "lukas-reineke/indent-blankline.nvim", main = "ibl",  opts = {} },
+	{ "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 	-- "gc" to comment visual regions/lines
-	{ "numToStr/Comment.nvim",               opts = {} },
+	-- { "numToStr/Comment.nvim", opts = {} },
+	{
+		"folke/ts-comments.nvim",
+		opts = {},
+		event = "VeryLazy",
+		enabled = vim.fn.has("nvim-0.10.0") == 1,
+	},
 	-- Fuzzy Finder (files, lsp, etc)
-	{ "nvim-telescope/telescope.nvim",       version = "*", dependencies = { "nvim-lua/plenary.nvim" } },
+	{ "nvim-telescope/telescope.nvim", version = "*", dependencies = { "nvim-lua/plenary.nvim" } },
 	{
 		"nvim-telescope/telescope-fzf-native.nvim",
 		build = "make",
@@ -115,21 +114,6 @@ require("lazy").setup({
 		-- Auto pairs
 		"windwp/nvim-autopairs",
 		event = "InsertEnter",
-		opts = {},
+		config = true,
 	},
-	{
-		"vhyrro/luarocks.nvim",
-		config = function()
-			require("luarocks").setup({})
-		end,
-	},
-	{
-		"rest-nvim/rest.nvim",
-		ft = "http",
-		dependencies = { "luarocks.nvim" },
-		config = function()
-			require("rest-nvim").setup()
-		end,
-	},
-	{},
 }, {})
