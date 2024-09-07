@@ -9,7 +9,7 @@ require("nvim-treesitter.configs").setup({
 	auto_install = true,
 
 	highlight = { enable = true, use_languagetree = true },
-	indent = { enable = true, disable = { "python" } },
+	indent = { enable = false, disable = { "python", "tsx" } },
 	incremental_selection = {
 		enable = true,
 		keymaps = {
