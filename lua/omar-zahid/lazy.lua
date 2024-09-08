@@ -116,4 +116,26 @@ require("lazy").setup({
 		event = "InsertEnter",
 		config = true,
 	},
+	{
+		"stevearc/oil.nvim",
+		---@module 'oil'
+		---@type oil.SetupOpts
+		opts = {
+			skip_confirm_for_simple_edits = true,
+			view_options = {
+				show_hidden = true,
+			},
+			keymaps = {
+				["<C-j>"] = false,
+				["<C-k>"] = false,
+				["<C-l>"] = false,
+				["<C-h>"] = false,
+				["<C-s>"] = false,
+				["<C-p>"] = false,
+			},
+		},
+		-- Optional dependencies
+		dependencies = { { "echasnovski/mini.icons", opts = {} } },
+		-- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if prefer nvim-web-devicons
+	},
 }, {})
