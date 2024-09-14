@@ -1,4 +1,6 @@
 vim.g.mapleader = " "
+-- map leader fw to :w
+vim.keymap.set("n", "<leader>fw", ":w<CR>", { desc = "Save file" })
 
 -- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>pv", "<CMD>Oil<CR>", { desc = "Open parent directory" })
