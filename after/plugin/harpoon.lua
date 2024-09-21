@@ -5,7 +5,7 @@ harpoon:setup()
 -- REQUIRED
 
 vim.keymap.set("n", "<leader>af", function()
-	harpoon:list():append()
+	harpoon:list():add()
 end)
 vim.keymap.set("n", "<C-i>", function()
 	harpoon.ui:toggle_quick_menu(harpoon:list())
