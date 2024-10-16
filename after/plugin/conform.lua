@@ -7,6 +7,7 @@ require("conform").setup({
 		typescript = { "prettierd", "prettier", stop_after_first = true },
 		typescriptreact = { "prettierd", "prettier", stop_after_first = true },
 		astro = { "prettierd", "prettier", stop_after_first = true },
+		json = { "prettierd", "prettier", stop_after_first = true },
 	},
 	format_on_save = {
 		-- These options will be passed to conform.format()
