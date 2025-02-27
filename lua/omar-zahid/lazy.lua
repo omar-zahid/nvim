@@ -83,7 +83,7 @@ require("lazy").setup({
 	{
 		"nvim-lualine/lualine.nvim",
 	},
-	{ "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
+	{ "lukas-reineke/indent-blankline.nvim", main = "ibl",  opts = {} },
 	-- "gc" to comment visual regions/lines
 	-- { "numToStr/Comment.nvim", opts = {} },
 	{
@@ -93,7 +93,7 @@ require("lazy").setup({
 		enabled = vim.fn.has("nvim-0.10.0") == 1,
 	},
 	-- Fuzzy Finder (files, lsp, etc)
-	{ "nvim-telescope/telescope.nvim", version = "*", dependencies = { "nvim-lua/plenary.nvim" } },
+	{ "nvim-telescope/telescope.nvim",       version = "*", dependencies = { "nvim-lua/plenary.nvim" } },
 	{
 		"nvim-telescope/telescope-fzf-native.nvim",
 		build = "make",
@@ -161,5 +161,31 @@ require("lazy").setup({
 				-- Configuration here, or leave empty to use defaults
 			})
 		end,
+	},
+	{
+		'mistweaverco/kulala.nvim',
+		opts = {
+			global_keymaps =
+			{
+				["Send request"] = { -- sets global mapping
+					"<leader>rr",
+					function() require("kulala").run() end,
+					mode = { "n", "v" }, -- optional mode, default is n
+					desc = "Send request" -- optional description, otherwise inferred from the key
+				},
+				["Send all requests"] = {
+					"<leader>ra",
+					function() require("kulala").run_all() end,
+					mode = { "n", "v" },
+					ft = "http", -- sets mapping for *.http files only
+				},
+				["Replay the last request"] = {
+					"<leader>rl",
+					function() require("kulala").replay() end,
+					ft = { "http", "rest" }, -- sets mapping for specified file types
+				},
+				["Find request"] = false -- set to false to disable
+			},
+		}
 	},
 }, {})
